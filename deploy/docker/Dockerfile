@@ -1,5 +1,9 @@
-FROM django:1.10-python2
+FROM centos:centos7
 
+
+# tools
+RUN yum -y update; yum clean all
+RUN yum -y install python-pip python-django git sqlite; yum clean all
 
 # code folder
 RUN mkdir -p /usr/src
