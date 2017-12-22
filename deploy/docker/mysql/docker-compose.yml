@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: cron-monitor-mysql
+    environment:
+    - MYSQL_ROOT_PASSWORD=cron-monitor
+    - MYSQL_DATABASE=cron-monitor-prod
